@@ -156,20 +156,23 @@ alfanum = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
 
 alfanum2 = [] # inicializando uma segunda lista incialmente vazia, que vai ser peenchida posteriormente no laço "FOR".
 
-# Laço "FOR" para verificar em cada iteração/repetição, usando a Lista "alfanum", a quantidade  de vezes que cada
-# caracter aparece dentro da variável "desafio".
-for an in alfanum:
-    print(f'{an} = {desafio.count(an)}')
-    alfanum2.append([desafio.count(an), an])  #Usando o Laço For para Preencher a Lista "alfanum2" vazia
-                                              # com a quantidade de vezes que cada caracter aparece na variável "desafio".
-                                              #Associando em cada indice da lista, o número de vezes junto com o caracter correspondente a ele.
-                                              #Importante colocar por primeiro o valor inteiro que corresponde a quantidade de vezes de cada caracter
-                                              #seguindo do caracter, pois iremos usar a função "sort" para ordenar em ordem crescente tendo como referencia
-                                              #o valor inteiro que corresponde ao numero de vezes que cada caracter apareceu na string "desafio".
+'''
+Laço "FOR" para verificar em cada iteração/repetição, usando a Lista "alfanum", a quantidade  de vezes que cada
+caracter aparece dentro da variável "desafio".
+Usando o Laço For para Preencher a Lista "alfanum2" vazia
+com a quantidade de vezes que cada caracter aparece na variável "desafio".
+Associando em cada indice da lista, o número de vezes junto com o caracter correspondente a ele.
+Importante colocar por primeiro o valor inteiro que corresponde a quantidade de vezes de cada caracter
+seguindo do caracter, pois iremos usar a função "sort" para ordenar em ordem crescente tendo como referencia
+o valor inteiro que corresponde ao numero de vezes que cada caracter apareceu na string "desafio".
+'''
+for alfa in alfanum:
+    # print(f'{alfa} = {desafio.count(alfa)}')
+    alfanum2.append([desafio.count(alfa), alfa])
 
 alfanum2.sort() # Ordenando/Organizando de forma crescente a Lista "alfanum2" que acabou de ser preenchida pelo "FOR" anterior.
 
 for alfa2 in alfanum2:
-    print(alfa2) # Resultado do desafio, excluindo os caracteres após o "_" (incluindo "_"), foi entrado a palavra-chave.
+    print(alfa2[1], end=' ') # Resultado do desafio, excluindo os caracteres após o "_" (incluindo "_"), foi entrado a palavra-chave.
 
 
